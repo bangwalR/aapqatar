@@ -96,8 +96,8 @@ export default function HomePage() {
                     style={{
                       background:
                         card.title === "Retail Division"
-                          ? "linear-gradient(135deg, #0A1F44 0%, #122952 100%)"
-                          : "linear-gradient(135deg, #A8863A 0%, #C9A84C 100%)",
+                          ? "linear-gradient(135deg, #0C1B2E 0%, #152C4A 100%)"
+                          : "linear-gradient(135deg, #B71C1C 0%, #D32F2F 100%)",
                     }}
                   >
                     <div className="flex items-start gap-5">
@@ -107,7 +107,7 @@ export default function HomePage() {
                           className={
                             card.title === "Retail Division"
                               ? "text-gold"
-                              : "text-navy"
+                              : "text-white"
                           }
                         />
                       </div>
@@ -116,7 +116,7 @@ export default function HomePage() {
                           className={`font-bold text-lg mb-2 font-montserrat ${
                             card.title === "Retail Division"
                               ? "text-white"
-                              : "text-navy"
+                              : "text-white"
                           }`}
                         >
                           {card.title}
@@ -125,7 +125,7 @@ export default function HomePage() {
                           className={`text-sm leading-relaxed mb-4 ${
                             card.title === "Retail Division"
                               ? "text-white/70"
-                              : "text-navy/70"
+                              : "text-white/70"
                           }`}
                         >
                           {card.desc}
@@ -134,7 +134,7 @@ export default function HomePage() {
                           className={`inline-flex items-center gap-1 text-sm font-semibold ${
                             card.title === "Retail Division"
                               ? "text-gold"
-                              : "text-navy"
+                              : "text-white"
                           }`}
                         >
                           {card.cta}{" "}
@@ -171,7 +171,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/distribution#inquiry"
-                className="flex items-center gap-2 bg-gold text-navy font-bold px-7 py-3.5 rounded hover:bg-gold-light transition-colors shadow-lg"
+                className="flex items-center gap-2 bg-gold text-white font-bold px-7 py-3.5 rounded hover:bg-gold-light transition-colors shadow-lg"
               >
                 <Globe size={16} />
                 B2B Inquiry

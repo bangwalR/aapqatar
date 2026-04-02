@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-navy: #0A1F44;
-  --color-navy-light: #122952;
-  --color-navy-dark: #071530;
-  --color-gold: #C9A84C;
-  --color-gold-light: #E2C56E;
-  --color-gold-dark: #A8863A;
-  --color-cream: #FAFAFA;
+  --color-navy: #0C1B2E;
+  --color-navy-light: #152C4A;
+  --color-navy-dark: #081420;
+  --color-gold: #D32F2F;
+  --color-gold-light: #E53935;
+  --color-gold-dark: #B71C1C;
+  --color-cream: #F5F7FF;
   --color-background: #ffffff;
-  --color-foreground: #0A1F44;
+  --color-foreground: #0C1B2E;
 }
 
 html {
@@ -18,7 +18,7 @@ html {
 
 body {
   font-family: var(--font-poppins), system-ui, sans-serif;
-  color: #0A1F44;
+  color: #0C1B2E;
   background: #ffffff;
 }
 
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gold-shimmer-text {
-  background: linear-gradient(90deg, #C9A84C, #E2C56E, #A8863A, #E2C56E, #C9A84C);
+  background: linear-gradient(90deg, #D32F2F, #E53935, #7B1FA2, #1565C0, #D32F2F);
   background-size: 200% auto;
   animation: shimmer 3s linear infinite;
   -webkit-background-clip: text;
@@ -60,8 +60,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #071530; }
-::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #081420; }
+::-webkit-scrollbar-thumb { background: #D32F2F; border-radius: 3px; }
 
 /* Mobile tap highlight removal */
 * {

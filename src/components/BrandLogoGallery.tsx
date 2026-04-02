@@ -60,7 +60,7 @@ export default function BrandLogoGallery() {
               variants={itemVariants}
               whileHover={{
                 y: -6,
-                boxShadow: "0 16px 40px rgba(201,168,76,0.25)",
+                boxShadow: "0 16px 40px rgba(211,47,47,0.2)",
               }}
               className="bg-white rounded-xl p-6 flex flex-col items-center justify-center gap-3 border border-transparent hover:border-gold/30 transition-colors duration-300 cursor-pointer group"
             >

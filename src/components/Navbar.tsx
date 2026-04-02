@@ -63,7 +63,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/distribution#inquiry"
-              className="flex items-center gap-1 bg-gold text-navy px-5 py-2.5 rounded font-semibold text-sm hover:bg-gold-light transition-all duration-200 shadow-md hover:shadow-gold/30"
+              className="flex items-center gap-1 bg-gold text-white px-5 py-2.5 rounded font-semibold text-sm hover:bg-gold-light transition-all duration-200 shadow-md hover:shadow-gold/30"
             >
               Get In Touch <ChevronRight size={14} />
             </Link>
@@ -102,7 +102,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/distribution#inquiry"
-                className="bg-gold text-navy px-5 py-3.5 rounded-lg font-semibold text-sm text-center mt-3 min-h-[48px] flex items-center justify-center"
+                className="bg-gold text-white px-5 py-3.5 rounded-lg font-semibold text-sm text-center mt-3 min-h-[48px] flex items-center justify-center"
                 onClick={() => setMobileOpen(false)}
               >
                 Get In Touch

@@ -149,11 +149,19 @@ export default function Footer() {
                   Partner With Us
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="text-white/60 hover:text-gold text-sm transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
             <div className="mt-6 pt-6 border-t border-white/10">
               <Link
                 href="/distribution#inquiry"
-                className="inline-flex items-center gap-2 bg-gold text-navy font-semibold text-sm px-4 py-2.5 rounded hover:bg-gold-light transition-colors w-full justify-center"
+                className="inline-flex items-center gap-2 bg-gold text-white font-semibold text-sm px-4 py-2.5 rounded hover:bg-gold-light transition-colors w-full justify-center"
               >
                 B2B Inquiry Form
               </Link>
@@ -169,9 +177,13 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Al Ansari & Partners Group. All
             rights reserved.
           </p>
-          <p className="flex items-center gap-1">
-            Doha, Qatar &bull; aapqatar.nadij.qa
-          </p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy-policy" className="hover:text-white/70 transition-colors">
+              Privacy Policy
+            </Link>
+            <span>&bull;</span>
+            <p>Doha, Qatar &bull; aapqatar.nadij.qa</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -137,18 +137,20 @@ export default function DistributionPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-navy/30" />
+          <div className="absolute inset-0" style={{background: 'linear-gradient(200deg, rgba(8,20,32,0.95) 0%, rgba(12,27,46,0.90) 40%, rgba(21,44,74,0.82) 100%)'}} />
         </div>
+        {/* Blue accent line at top */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-white/40 via-white/20 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-14 w-full">
-          <span className="inline-block text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2 sm:mb-3 border border-gold/30 px-3 py-1 rounded-full">
+          <span className="inline-block text-white/90 text-xs font-semibold tracking-[0.2em] uppercase mb-2 sm:mb-3 border border-white/30 px-3 py-1 rounded-full">
             Distribution Division
           </span>
           <h1 className="text-white text-3xl sm:text-4xl lg:text-6xl font-black font-montserrat leading-tight">
             Global Distribution
             <br />
-            <span className="gold-shimmer-text">Power</span>
+            Power
           </h1>
-          <p className="text-white/70 text-sm sm:text-lg mt-2 sm:mt-3 max-w-2xl">
+          <p className="text-white/85 text-sm sm:text-lg mt-2 sm:mt-3 max-w-2xl">
             5 specialised distribution entities covering FMCG, luxury fragrances,
             packing, and logistics across Qatar and beyond.
           </p>
@@ -231,7 +233,7 @@ export default function DistributionPage() {
                       href="#inquiry"
                       className={`inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 rounded transition-all ${
                         isEven
-                          ? "bg-gold text-navy hover:bg-gold-light"
+                          ? "bg-gold text-white hover:bg-gold-light"
                           : "bg-navy text-white hover:bg-navy-light"
                       }`}
                     >
@@ -406,7 +408,7 @@ export default function DistributionPage() {
             </div>
             <Link
               href="/retail"
-              className="inline-flex items-center gap-2 bg-gold text-navy font-bold px-6 py-3 rounded hover:bg-gold-light transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-2 bg-gold text-white font-bold px-6 py-3 rounded hover:bg-gold-light transition-colors whitespace-nowrap"
             >
               View Retail Stores <ChevronRight size={16} />
             </Link>

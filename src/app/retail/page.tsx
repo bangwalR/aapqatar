@@ -77,16 +77,18 @@ export default function RetailPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/20" />
+          <div className="absolute inset-0" style={{background: 'linear-gradient(160deg, rgba(183,28,28,0.95) 0%, rgba(211,47,47,0.88) 40%, rgba(229,57,53,0.80) 100%)'}} />
         </div>
+        {/* Red accent line at top */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-white/40 via-white/20 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-14 w-full">
-          <span className="inline-block text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2 sm:mb-3 border border-gold/30 px-3 py-1 rounded-full">
+          <span className="inline-block text-white/90 text-xs font-semibold tracking-[0.2em] uppercase mb-2 sm:mb-3 border border-white/30 px-3 py-1 rounded-full">
             Retail Division
           </span>
           <h1 className="text-white text-3xl sm:text-4xl lg:text-6xl font-black font-montserrat leading-tight">
             Our Retail World
           </h1>
-          <p className="text-white/70 text-sm sm:text-lg mt-2 sm:mt-3 max-w-2xl">
+          <p className="text-white/85 text-sm sm:text-lg mt-2 sm:mt-3 max-w-2xl">
             7+ branches bringing premium quality groceries, fresh produce, and
             trusted brands to communities across Qatar.
           </p>
@@ -123,7 +125,7 @@ export default function RetailPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
               </div>
               {/* Floating badge */}
-              <div className="absolute -bottom-5 -right-5 bg-gold text-navy font-black text-sm px-5 py-3 rounded-xl shadow-lg">
+              <div className="absolute -bottom-5 -right-5 bg-gold text-white font-black text-sm px-5 py-3 rounded-xl shadow-lg">
                 Est. Heritage Brand
               </div>
             </div>
@@ -205,7 +207,7 @@ export default function RetailPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
                   <div className="absolute bottom-3 left-3">
-                    <span className="bg-gold text-navy text-xs font-bold px-2.5 py-1 rounded-full">
+                    <span className="bg-gold text-white text-xs font-bold px-2.5 py-1 rounded-full">
                       Open Now
                     </span>
                   </div>
@@ -297,7 +299,7 @@ export default function RetailPage() {
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
                       step.done
-                        ? "bg-gold text-navy"
+                        ? "bg-gold text-white"
                         : "bg-navy-dark text-white/40 border border-white/20"
                     }`}
                   >
@@ -332,7 +334,7 @@ export default function RetailPage() {
           </p>
           <Link
             href="/distribution#inquiry"
-            className="inline-flex items-center gap-2 bg-gold text-navy font-bold px-7 py-3.5 rounded hover:bg-gold-light transition-colors shadow-lg"
+            className="inline-flex items-center gap-2 bg-gold text-white font-bold px-7 py-3.5 rounded hover:bg-gold-light transition-colors shadow-lg"
           >
             Submit B2B Inquiry <ChevronRight size={16} />
           </Link>
