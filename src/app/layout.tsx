@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en" className={`${montserrat.variable} ${poppins.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
         <Navbar />
-        <main className="flex-1 pt-16 sm:pt-20">{children}</main>
+        <main className="flex-1 pt-16 sm:pt-20 md:pt-28">{children}</main>
         <Footer />
       </body>
     </html>

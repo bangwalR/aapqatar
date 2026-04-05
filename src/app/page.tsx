@@ -3,7 +3,7 @@ import StatsCounter from "@/components/StatsCounter";
 import BrandLogoGallery from "@/components/BrandLogoGallery";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, ShoppingBag, Truck, Award, Globe } from "lucide-react";
+import { ChevronRight, ShoppingBag, Truck, Award, Globe, Star, ShieldCheck, Heart, Target, Eye } from "lucide-react";
 
 const divisionCards = [
   {
@@ -32,6 +32,66 @@ export default function HomePage() {
 
       {/* Stats Counter */}
       <StatsCounter />
+
+      {/* Services Section */}
+      <section className="py-14 lg:py-20 bg-navy">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-block text-gold text-xs font-semibold tracking-[0.25em] uppercase mb-3 border border-gold/30 px-3 py-1 rounded-full">
+              What We Offer
+            </span>
+            <h2 className="text-white text-2xl sm:text-3xl font-black font-montserrat mb-3">Our Services</h2>
+            <p className="text-white/55 max-w-xl mx-auto text-sm">
+              From daily groceries to global FMCG distribution — AAP Group covers every aspect of Qatar&apos;s retail and supply chain landscape.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {[
+              { icon: ShoppingBag, label: "Grocery Store",     desc: "Daily essentials across all branches" },
+              { icon: Star,        label: "Consumer Goods",    desc: "Wide range of FMCG categories" },
+              { icon: ShieldCheck, label: "Frozen Foods",      desc: "Fresh frozen assortment" },
+              { icon: Heart,       label: "Cosmetics",         desc: "Beauty & personal care" },
+              { icon: Truck,       label: "FMCG Distribution", desc: "End-to-end supply chain" },
+            ].map((s) => {
+              const Icon = s.icon;
+              return (
+                <div key={s.label} className="bg-navy-light rounded-xl p-5 border border-gold/10 hover:border-gold/30 transition-colors group text-center">
+                  <div className="p-2.5 bg-gold/10 rounded-xl w-fit mb-3 mx-auto group-hover:bg-gold/20 transition-colors">
+                    <Icon size={18} className="text-gold" />
+                  </div>
+                  <h4 className="text-white font-bold text-sm font-montserrat mb-1">{s.label}</h4>
+                  <p className="text-white/50 text-xs leading-relaxed">{s.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission / Vision strip */}
+      <section className="py-12 bg-cream border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { icon: Target, title: "Mission",          desc: "To cater to our residents with unparalleled value and customer service — the guiding light of our 48+ year journey." },
+              { icon: Eye,    title: "Vision",           desc: "To provide exceptional value and customer service through our wide range of high-quality products and services." },
+              { icon: Heart,  title: "Values",           desc: "Customer-first thinking, transparency, quality assurance, and community commitment at every level." },
+              { icon: ShieldCheck, title: "Quality",    desc: "We source supplies via air and sea freight to ensure the highest standards of freshness and quality for 15,000+ daily customers." },
+            ].map((p) => {
+              const Icon = p.icon;
+              return (
+                <div key={p.title} className="bg-white rounded-xl p-6 border border-gray-100 hover:border-gold/30 hover:shadow-md transition-all group">
+                  <div className="p-2.5 bg-gold/10 rounded-xl w-fit mb-4 group-hover:bg-gold/20 transition-colors">
+                    <Icon size={18} className="text-gold" />
+                  </div>
+                  <h3 className="text-navy font-bold text-base font-montserrat mb-2">{p.title}</h3>
+                  <p className="text-navy/60 text-sm leading-relaxed">{p.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
       {/* About AAP */}
       <section className="py-14 lg:py-28 bg-white overflow-hidden">

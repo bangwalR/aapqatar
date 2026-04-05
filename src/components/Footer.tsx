@@ -42,15 +42,15 @@ export default function Footer() {
             <div className="flex flex-col gap-2.5 text-sm text-white/60">
               <div className="flex items-start gap-2">
                 <MapPin size={14} className="text-gold mt-0.5 shrink-0" />
-                <span>Doha, State of Qatar</span>
+                <span>1st Floor, Retailmart Al Wakra Building, Doha, Qatar</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={14} className="text-gold shrink-0" />
-                <span>+974 4444 0000</span>
+                <a href="tel:97444643977" className="hover:text-gold transition-colors">+974 44643977</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-gold shrink-0" />
-                <span>info@aapqatar.com</span>
+                <a href="mailto:info@aapqatar.com" className="hover:text-gold transition-colors">info@aapqatar.com</a>
               </div>
             </div>
           </div>
@@ -117,6 +117,22 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <Link
+                  href="/about"
+                  className="text-white/60 hover:text-gold text-sm transition-colors"
+                >
+                  About AAP Group
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-white/60 hover:text-gold text-sm transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/distribution#inquiry"
                   className="text-white/60 hover:text-gold text-sm transition-colors"
                 >
@@ -151,6 +167,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/terms"
+                  className="text-white/60 hover:text-gold text-sm transition-colors"
+                >
+                  Terms &amp; Conditions
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/privacy-policy"
                   className="text-white/60 hover:text-gold text-sm transition-colors"
                 >
@@ -178,6 +202,10 @@ export default function Footer() {
             rights reserved.
           </p>
           <div className="flex items-center gap-4">
+            <Link href="/terms" className="hover:text-white/70 transition-colors">
+              Terms &amp; Conditions
+            </Link>
+            <span>&bull;</span>
             <Link href="/privacy-policy" className="hover:text-white/70 transition-colors">
               Privacy Policy
             </Link>
