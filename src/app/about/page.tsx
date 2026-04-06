@@ -13,6 +13,9 @@ import {
   Users,
   Award,
   Globe,
+  Gift,
+  CreditCard,
+  Coins,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -346,6 +349,129 @@ export default function AboutPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Alyoumi Loyalty Programme */}
+      <section className="py-16 lg:py-24 bg-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Intro */}
+          <div className="flex flex-col lg:flex-row items-center gap-10 mb-16">
+            <div className="flex-1">
+              <span className="inline-block text-gold text-xs font-semibold tracking-[0.25em] uppercase mb-4 border border-gold/30 px-3 py-1 rounded-full">
+                Loyalty Programme
+              </span>
+              <h2 className="text-navy text-2xl sm:text-3xl lg:text-4xl font-black font-montserrat mb-5 leading-tight">
+                Welcome to the{" "}
+                <span className="gold-shimmer-text">Alyoumi Rewards</span> Programme
+              </h2>
+              <p className="text-navy/65 leading-relaxed mb-6">
+                The Alyoumi Card is a free loyalty card available at all Retail Mart
+                outlets. It allows cardholders to earn points on every qualifying
+                purchase and redeem them across all Retail Mart branches — giving
+                you something extra every time you shop with us.
+              </p>
+              <a
+                href="https://alyoumi.qa/signup.aspx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gold text-white font-bold px-6 py-3 rounded hover:bg-gold-light transition-colors shadow-lg group"
+              >
+                <CreditCard size={16} /> Get Your Card Free
+              </a>
+            </div>
+            <div className="lg:w-72 xl:w-80 bg-navy rounded-2xl p-8 text-center shadow-xl border border-gold/20 shrink-0">
+              <div className="w-16 h-16 bg-gold/15 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Gift size={32} className="text-gold" />
+              </div>
+              <p className="text-gold text-xs font-bold tracking-[0.2em] uppercase mb-1">Alyoumi Card</p>
+              <h3 className="text-white text-xl font-black font-montserrat mb-2">Quality · Value · Service</h3>
+              <p className="text-white/55 text-sm">
+                With Alyoumi Card there is something extra every time you shop with us.
+              </p>
+              <a
+                href="https://alyoumi.qa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-block text-gold text-xs font-semibold hover:underline"
+              >
+                alyoumi.qa →
+              </a>
+            </div>
+          </div>
+
+          {/* Key to great rewards */}
+          <div className="text-center mb-10">
+            <span className="inline-block text-gold text-xs font-semibold tracking-[0.25em] uppercase mb-3 border border-gold/30 px-3 py-1 rounded-full">
+              How It Works
+            </span>
+            <h2 className="text-navy text-2xl sm:text-3xl lg:text-4xl font-black font-montserrat mb-2">
+              Key to Great Rewards
+            </h2>
+            <p className="text-navy/55 max-w-xl mx-auto text-sm">
+              The Alyoumi app is one of the prestigious projects in the corporate industry.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            {/* Register */}
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group">
+              <div className="p-3 bg-gold/10 rounded-xl w-fit mb-5 group-hover:bg-gold/20 transition-colors">
+                <CreditCard size={22} className="text-gold" />
+              </div>
+              <h3 className="text-navy font-bold text-lg font-montserrat mb-4">How to Register?</h3>
+              <ul className="space-y-2 text-navy/65 text-sm leading-relaxed">
+                <li>
+                  Click here{" "}
+                  <a
+                    href="https://www.alyoumi.qa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gold underline hover:text-gold-light"
+                  >
+                    www.alyoumi.qa
+                  </a>
+                </li>
+                <li>Register at the kiosk available at any Retail Mart outlet.</li>
+                <li>Registration must be completed within 30 days from first use.</li>
+              </ul>
+            </div>
+
+            {/* Earn */}
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group">
+              <div className="p-3 bg-gold/10 rounded-xl w-fit mb-5 group-hover:bg-gold/20 transition-colors">
+                <Gift size={22} className="text-gold" />
+              </div>
+              <h3 className="text-navy font-bold text-lg font-montserrat mb-4">How to Earn Points?</h3>
+              <p className="text-navy/65 text-sm leading-relaxed">
+                Present your Alyoumi loyalty card during your purchase at any Retail
+                Mart outlet. Your card must be registered in order to redeem points.
+              </p>
+            </div>
+
+            {/* Redeem */}
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group">
+              <div className="p-3 bg-gold/10 rounded-xl w-fit mb-5 group-hover:bg-gold/20 transition-colors">
+                <Coins size={22} className="text-gold" />
+              </div>
+              <h3 className="text-navy font-bold text-lg font-montserrat mb-4">How to Redeem Points?</h3>
+              <p className="text-navy/65 text-sm leading-relaxed">
+                Earn 1 point for every 1 Qatari Riyal spent on qualifying purchases
+                in selected categories from participating Retail Mart stores in Qatar.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <a
+              href="https://alyoumi.qa/redeem.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-navy text-white font-bold px-10 py-3.5 rounded hover:bg-navy-light transition-colors tracking-widest uppercase text-sm"
+            >
+              Redeem Points
+            </a>
           </div>
         </div>
       </section>
