@@ -134,7 +134,7 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy py-16 sm:py-24 relative overflow-hidden">
+      <section className="bg-navy pt-32 sm:pt-40 md:pt-44 pb-16 sm:pb-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, #D32F2F 0%, transparent 50%), radial-gradient(circle at 80% 50%, #152C4A 0%, transparent 50%)" }} />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-gold text-xs font-semibold tracking-[0.25em] uppercase px-4 py-2 rounded-full mb-6">

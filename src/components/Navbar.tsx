@@ -9,8 +9,9 @@ import { Menu, X, ChevronRight } from "lucide-react";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Retail Division", href: "/retail" },
-  { label: "Distribution", href: "/distribution" },
+  { label: "Loyalty", href: "/loyalty" },
+  { label: "Services", href: "/#services" },
+  { label: "Portfolio", href: "/#portfolio" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -34,9 +35,11 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-navy shadow-xl" : "bg-navy/95 backdrop-blur-md shadow-lg"}`}>
-      {/* Top info bar */}
-      <div className="hidden md:block border-b border-white/10">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      scrolled ? "bg-navy/95 backdrop-blur-md shadow-xl" : "bg-transparent"
+    }`}>
+      {/* Top info bar — visible only after scroll */}
+      <div className={`hidden md:block border-b border-white/10 transition-all duration-300 ${scrolled ? "opacity-100" : "opacity-0 pointer-events-none h-0 overflow-hidden"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-8">
             <div className="flex items-center gap-6">
@@ -55,18 +58,18 @@ export default function Navbar() {
       </div>
 
       {/* Main nav */}
-      <div className="border-b border-gold/20">
+      <div className={`transition-colors duration-500 ${scrolled ? "border-b border-white/10" : ""}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-16 sm:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
-            <div className="bg-white rounded-xl px-3 py-2 shadow-md hover:shadow-gold/20 transition-shadow">
+            <div className="bg-white rounded-xl px-3 py-2 shadow-md">
               <Image
-                src="/assets/logos/logo-aap.png"
+                src="/assets/logos/logo-aap-new.jpeg"
                 alt="AAP Group"
                 width={614}
                 height={76}
-                className="h-8 sm:h-10 w-auto object-contain"
+                className="h-12 sm:h-16 w-auto object-contain"
                 style={{ width: "auto" }}
                 priority
               />
@@ -85,10 +88,16 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/distribution#inquiry"
-              className="flex items-center gap-1 bg-gold text-white px-5 py-2.5 rounded font-semibold text-sm hover:bg-gold-light transition-all duration-200 shadow-md hover:shadow-gold/30"
+              href="/retail"
+              className="flex items-center gap-1 bg-[#D32F2F] text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-[#B71C1C] transition-all duration-200 shadow-md"
             >
-              Get In Touch <ChevronRight size={14} />
+              Retail Division
+            </Link>
+            <Link
+              href="/distribution"
+              className="flex items-center gap-1 bg-[#1a2e5a] text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-[#0C1B2E] transition-all duration-200 shadow-md"
+            >
+              Distribution Division
             </Link>
           </div>
 
@@ -125,11 +134,18 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/distribution#inquiry"
-                className="bg-gold text-white px-5 py-3.5 rounded-lg font-semibold text-sm text-center mt-3 min-h-[48px] flex items-center justify-center"
+                href="/retail"
+                className="bg-[#D32F2F] text-white px-5 py-3.5 rounded-full font-semibold text-sm text-center mt-3 min-h-[48px] flex items-center justify-center"
                 onClick={() => setMobileOpen(false)}
               >
-                Get In Touch
+                Retail Division
+              </Link>
+              <Link
+                href="/distribution"
+                className="bg-[#1a2e5a] text-white px-5 py-3.5 rounded-full font-semibold text-sm text-center mt-2 min-h-[48px] flex items-center justify-center"
+                onClick={() => setMobileOpen(false)}
+              >
+                Distribution Division
               </Link>
             </div>
           </motion.div>

@@ -3,211 +3,143 @@ import StatsCounter from "@/components/StatsCounter";
 import BrandLogoGallery from "@/components/BrandLogoGallery";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, ShoppingBag, Truck, Award, Globe, Star, ShieldCheck, Heart, Target, Eye } from "lucide-react";
-
-const divisionCards = [
-  {
-    icon: ShoppingBag,
-    title: "Retail Division",
-    desc: "New Indian Supermarket & 7-branch Retailmart network bringing premium quality FMCG to Qatari communities.",
-    href: "/retail",
-    cta: "View Retail",
-    accent: "bg-gradient-to-br from-navy to-navy-light",
-  },
-  {
-    icon: Truck,
-    title: "Distribution Division",
-    desc: "5 specialised trading & distribution entities covering FMCG, perfumes, packaging, and general trading across Qatar.",
-    href: "/distribution",
-    cta: "View Distribution",
-    accent: "bg-gradient-to-br from-gold-dark to-gold",
-  },
-];
+import { ChevronRight, ShoppingBag, Truck, CheckCircle2, MapPin, Phone, Mail, Quote } from "lucide-react";
 
 export default function HomePage() {
   return (
     <>
-      {/* Split Hero */}
+      {/* Hero */}
       <SplitHero />
 
-      {/* Stats Counter */}
+      {/* Stats */}
       <StatsCounter />
 
-      {/* Services Section */}
-      <section className="py-14 lg:py-20 bg-navy">
+      {/* About — "Building Business Excellence Together" */}
+      <section className="py-16 lg:py-28 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-block text-gold text-xs font-semibold tracking-[0.25em] uppercase mb-3 border border-gold/30 px-3 py-1 rounded-full">
-              What We Offer
-            </span>
-            <h2 className="text-white text-2xl sm:text-3xl font-black font-montserrat mb-3">Our Services</h2>
-            <p className="text-white/55 max-w-xl mx-auto text-sm">
-              From daily groceries to global FMCG distribution — AAP Group covers every aspect of Qatar&apos;s retail and supply chain landscape.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            {[
-              { icon: ShoppingBag, label: "Grocery Store",     desc: "Daily essentials across all branches" },
-              { icon: Star,        label: "Consumer Goods",    desc: "Wide range of FMCG categories" },
-              { icon: ShieldCheck, label: "Frozen Foods",      desc: "Fresh frozen assortment" },
-              { icon: Heart,       label: "Cosmetics",         desc: "Beauty & personal care" },
-              { icon: Truck,       label: "FMCG Distribution", desc: "End-to-end supply chain" },
-            ].map((s) => {
-              const Icon = s.icon;
-              return (
-                <div key={s.label} className="bg-navy-light rounded-xl p-5 border border-gold/10 hover:border-gold/30 transition-colors group text-center">
-                  <div className="p-2.5 bg-gold/10 rounded-xl w-fit mb-3 mx-auto group-hover:bg-gold/20 transition-colors">
-                    <Icon size={18} className="text-gold" />
-                  </div>
-                  <h4 className="text-white font-bold text-sm font-montserrat mb-1">{s.label}</h4>
-                  <p className="text-white/50 text-xs leading-relaxed">{s.desc}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Image with stats overlay */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#1a2e5a]" />
+              <Image
+                src="/assets/hero/hero.jpg"
+                alt="AAP Group team meeting"
+                width={700}
+                height={500}
+                className="w-full h-[420px] object-cover"
+              />
+              {/* Stats badge overlay */}
+              <div className="absolute bottom-6 left-6 right-6 bg-white rounded-xl p-5 shadow-xl flex items-center justify-around gap-4">
+                <div className="text-center">
+                  <p className="text-[#D32F2F] text-2xl font-black font-montserrat">18+</p>
+                  <p className="text-navy/60 text-xs font-medium">Years Experience</p>
                 </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Mission / Vision strip */}
-      <section className="py-12 bg-cream border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {[
-              { icon: Target, title: "Mission",          desc: "To cater to our residents with unparalleled value and customer service — the guiding light of our 48+ year journey." },
-              { icon: Eye,    title: "Vision",           desc: "To provide exceptional value and customer service through our wide range of high-quality products and services." },
-              { icon: Heart,  title: "Values",           desc: "Customer-first thinking, transparency, quality assurance, and community commitment at every level." },
-              { icon: ShieldCheck, title: "Quality",    desc: "We source supplies via air and sea freight to ensure the highest standards of freshness and quality for 15,000+ daily customers." },
-            ].map((p) => {
-              const Icon = p.icon;
-              return (
-                <div key={p.title} className="bg-white rounded-xl p-6 border border-gray-100 hover:border-gold/30 hover:shadow-md transition-all group">
-                  <div className="p-2.5 bg-gold/10 rounded-xl w-fit mb-4 group-hover:bg-gold/20 transition-colors">
-                    <Icon size={18} className="text-gold" />
-                  </div>
-                  <h3 className="text-navy font-bold text-base font-montserrat mb-2">{p.title}</h3>
-                  <p className="text-navy/60 text-sm leading-relaxed">{p.desc}</p>
+                <div className="w-px h-10 bg-gray-200" />
+                <div className="text-center">
+                  <p className="text-[#1a2e5a] text-2xl font-black font-montserrat">7+</p>
+                  <p className="text-navy/60 text-xs font-medium">Retail Branches</p>
                 </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* About AAP */}
-      <section className="py-14 lg:py-28 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-            {/* Text */}
-            <div>
-              <span className="inline-block text-gold text-xs font-semibold tracking-[0.25em] uppercase mb-4 border border-gold/30 px-3 py-1 rounded-full">
-                Who We Are
-              </span>
-              <h2 className="text-navy text-2xl sm:text-3xl lg:text-5xl font-black font-montserrat leading-tight mb-5">
-                Qatar&apos;s Dual-Engine
-                <br />
-                <span className="gold-shimmer-text">Business Group</span>
-              </h2>
-              <p className="text-navy/65 leading-relaxed mb-6">
-                Al Ansari & Partners (AAP) Group is a Doha-headquartered
-                conglomerate with two powerful divisions operating in synergy.
-                Our retail arm serves everyday consumers across Qatar, while our
-                distribution division powers the supply chains of leading FMCG
-                brands throughout the Gulf.
-              </p>
-              <p className="text-navy/65 leading-relaxed mb-8">
-                With 7+ retail locations, 5+ distribution verticals, and a
-                portfolio of 20+ trusted brands, AAP Group is the behind-the-
-                scenes force keeping Qatar&apos;s retail shelves stocked and
-                businesses supplied.
-              </p>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-                <Link
-                  href="/retail"
-                  className="inline-flex items-center justify-center gap-2 bg-navy text-white font-semibold px-6 py-3 rounded hover:bg-navy-light transition-colors group"
-                >
-                  Our Retail World
-                  <ChevronRight
-                    size={16}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </Link>
-                <Link
-                  href="/distribution"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-navy text-navy font-semibold px-6 py-3 rounded hover:bg-navy hover:text-white transition-colors group"
-                >
-                  Distribution Network
-                  <ChevronRight
-                    size={16}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </Link>
+                <div className="w-px h-10 bg-gray-200" />
+                <div className="text-center">
+                  <p className="text-[#D32F2F] text-2xl font-black font-montserrat">5+</p>
+                  <p className="text-navy/60 text-xs font-medium">Distribution Verticals</p>
+                </div>
               </div>
             </div>
 
-            {/* Cards */}
-            <div className="flex flex-col gap-5">
-              {divisionCards.map((card) => {
-                const Icon = card.icon;
-                return (
-                  <Link
-                    key={card.title}
-                    href={card.href}
-                    className="group relative overflow-hidden rounded-2xl p-7 hover:scale-[1.02] transition-transform duration-300"
-                    style={{
-                      background:
-                        card.title === "Retail Division"
-                          ? "linear-gradient(135deg, #0C1B2E 0%, #152C4A 100%)"
-                          : "linear-gradient(135deg, #B71C1C 0%, #D32F2F 100%)",
-                    }}
-                  >
-                    <div className="flex items-start gap-5">
-                      <div className="p-3 bg-white/15 rounded-xl">
-                        <Icon
-                          size={24}
-                          className={
-                            card.title === "Retail Division"
-                              ? "text-gold"
-                              : "text-white"
-                          }
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h3
-                          className={`font-bold text-lg mb-2 font-montserrat ${
-                            card.title === "Retail Division"
-                              ? "text-white"
-                              : "text-white"
-                          }`}
-                        >
-                          {card.title}
-                        </h3>
-                        <p
-                          className={`text-sm leading-relaxed mb-4 ${
-                            card.title === "Retail Division"
-                              ? "text-white/70"
-                              : "text-white/70"
-                          }`}
-                        >
-                          {card.desc}
-                        </p>
-                        <span
-                          className={`inline-flex items-center gap-1 text-sm font-semibold ${
-                            card.title === "Retail Division"
-                              ? "text-gold"
-                              : "text-white"
-                          }`}
-                        >
-                          {card.cta}{" "}
-                          <ChevronRight
-                            size={14}
-                            className="group-hover:translate-x-1 transition-transform"
-                          />
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
+            {/* Text */}
+            <div>
+              <h2 className="text-navy text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat leading-tight mb-6">
+                Building Business<br />Excellence Together
+              </h2>
+              <p className="text-navy/65 leading-relaxed mb-5">
+                AAP Group of Companies stands as a beacon of business excellence in Qatar,
+                operating across two dynamic divisions that serve communities and industries
+                alike. Our Retail Division brings premium fresh produce and everyday
+                essentials directly to consumers through 7+ strategically located branches.
+              </p>
+              <p className="text-navy/65 leading-relaxed mb-8">
+                Meanwhile, our Distribution Division powers FMCG supply chains across Qatar
+                and the wider Gulf region, connecting manufacturers with markets through 5+
+                specialized verticals. Together, we create value, drive growth, and build
+                lasting partnerships.
+              </p>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 text-[#D32F2F] font-bold hover:gap-3 transition-all group"
+              >
+                Learn Our Story <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services — "Comprehensive Business Solutions" */}
+      <section id="services" className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-navy text-3xl sm:text-4xl font-black font-montserrat mb-3">
+              Comprehensive Business Solutions
+            </h2>
+            <p className="text-navy/55 max-w-xl mx-auto text-sm lg:text-base">
+              Two specialized divisions working in harmony to deliver exceptional value across retail
+              and distribution sectors.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Retail */}
+            <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+              <div className="h-1.5 bg-[#D32F2F]" />
+              <div className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-[#D32F2F] rounded-full flex items-center justify-center shrink-0">
+                    <ShoppingBag size={24} className="text-white" />
+                  </div>
+                  <h3 className="text-navy text-2xl font-bold font-montserrat">Retail Division</h3>
+                </div>
+                <p className="text-navy/65 text-sm leading-relaxed mb-6">
+                  Our Retail Division operates 7+ branches across Qatar, serving
+                  communities with premium fresh produce and trusted everyday
+                  essentials. We bring quality products directly to consumers through
+                  strategically located stores.
+                </p>
+                <ul className="space-y-2.5">
+                  {["Premium fresh produce sourcing", "7+ branches across Qatar", "Community-focused service", "Quality assured products", "Competitive pricing strategy"].map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-navy/70 text-sm">
+                      <CheckCircle2 size={15} className="text-[#D32F2F] shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Distribution */}
+            <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+              <div className="h-1.5 bg-[#1a2e5a]" />
+              <div className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-[#1a2e5a] rounded-full flex items-center justify-center shrink-0">
+                    <Truck size={24} className="text-white" />
+                  </div>
+                  <h3 className="text-navy text-2xl font-bold font-montserrat">Distribution Division</h3>
+                </div>
+                <p className="text-navy/65 text-sm leading-relaxed mb-6">
+                  Powering FMCG supply chains across Qatar and the wider Gulf region
+                  through 5+ specialized distribution verticals. We connect manufacturers
+                  with markets efficiently and reliably.
+                </p>
+                <ul className="space-y-2.5">
+                  {["5+ distribution verticals", "Gulf region coverage", "FMCG supply chain expertise", "Reliable logistics network", "Strategic market partnerships"].map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-navy/70 text-sm">
+                      <CheckCircle2 size={15} className="text-[#1a2e5a] shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -216,68 +148,181 @@ export default function HomePage() {
       {/* Brand Logo Gallery */}
       <BrandLogoGallery />
 
-      {/* Awards / Trust Strip */}
-      <section className="py-14 bg-navy">
+      {/* Portfolio */}
+      <section id="portfolio" className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="text-center lg:text-left">
-              <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold font-montserrat mb-2">
-                Ready to Partner with AAP?
-              </h3>
-              <p className="text-white/60">
-                Join Qatar&apos;s most trusted distribution and retail network.
-              </p>
+          <div className="text-center mb-12">
+            <span className="inline-block text-[#D32F2F] text-xs font-semibold tracking-[0.25em] uppercase mb-3 border border-[#D32F2F]/30 px-3 py-1 rounded-full">
+              Our Portfolio
+            </span>
+            <h2 className="text-navy text-3xl sm:text-4xl font-black font-montserrat mb-3">
+              Featured Projects
+            </h2>
+            <p className="text-navy/55 max-w-xl mx-auto text-sm lg:text-base">
+              Highlights from our retail and distribution sectors.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { tag: "RETAIL",       title: "Fresh Market Expansion",   img: "/assets/stores/rmart-wakra.jpg" },
+              { tag: "DISTRIBUTION", title: "Gulf Logistics Network",    img: "/assets/stores/rmart-mesaieed.jpg" },
+              { tag: "RETAIL",       title: "Community Store Launch",    img: "/assets/stores/rmart-sheireb.jpg" },
+              { tag: "DISTRIBUTION", title: "FMCG Partnership",          img: "/assets/stores/rmart-sanayya.jpg" },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow group">
+                <div className="relative h-52 overflow-hidden bg-gray-100">
+                  <Image src={item.img} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-5">
+                  <p
+                    className="text-xs font-bold uppercase tracking-widest mb-1"
+                    style={{ color: item.tag === "RETAIL" ? "#D32F2F" : "#1a2e5a" }}
+                  >
+                    {item.tag}
+                  </p>
+                  <h4 className="text-navy font-bold text-base font-montserrat">{item.title}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            {/* Photo */}
+            <div className="relative rounded-2xl overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#1a2e5a]" />
+              <Image
+                src="/assets/hero/distribution-hero.jpg"
+                alt="Client testimonial"
+                width={600}
+                height={500}
+                className="w-full h-[420px] object-cover"
+              />
             </div>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                href="/distribution#inquiry"
-                className="flex items-center gap-2 bg-gold text-white font-bold px-7 py-3.5 rounded hover:bg-gold-light transition-colors shadow-lg"
-              >
-                <Globe size={16} />
-                B2B Inquiry
-              </Link>
-              <Link
-                href="/retail"
-                className="flex items-center gap-2 border-2 border-white/30 text-white font-semibold px-7 py-3.5 rounded hover:border-gold hover:text-gold transition-colors"
-              >
-                <Award size={16} />
-                Find a Store
-              </Link>
+
+            {/* Quote */}
+            <div>
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-2 h-2 rounded-full bg-[#D32F2F]" />
+                <span className="text-navy/50 text-xs font-semibold uppercase tracking-widest">
+                  Client Testimonials
+                </span>
+              </div>
+
+              <Quote size={48} className="text-[#D32F2F]/20 mb-4" />
+
+              <blockquote className="text-navy text-xl sm:text-2xl lg:text-3xl font-bold font-montserrat leading-snug mb-8">
+                &ldquo;AAP Group has been instrumental in transforming
+                our supply chain operations. Their distribution
+                expertise and retail network have opened new
+                markets for our products across the Gulf region.&rdquo;
+              </blockquote>
+
+              <div className="flex items-center gap-4">
+                <div>
+                  <p className="text-navy font-bold text-base">Mohammed Al-Rashid</p>
+                  <p className="text-navy/55 text-sm">CEO, Gulf Food Industries</p>
+                </div>
+                <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-green-200">
+                  <CheckCircle2 size={12} /> Verified Partner
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FLV Brand Section */}
-      <section className="py-12 lg:py-16 bg-cream">
+      {/* Contact Cards */}
+      <section className="py-16 lg:py-24 bg-[#0C1B2E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 justify-center text-center sm:text-left">
-            <div className="relative w-32 h-20">
-              <Image
-                src="/assets/logos/logo-flv.png"
-                alt="FLV Brand"
-                fill
-                className="object-contain"
-              />
+          <div className="text-center mb-10">
+            <h2 className="text-white text-2xl sm:text-3xl font-black font-montserrat mb-2">
+              Ready to partner with Qatar&apos;s leading retail and distribution group? Reach
+              out to our team today.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Retail */}
+            <div className="bg-white rounded-2xl p-8 relative overflow-hidden">
+              <div className="absolute top-0 left-8 w-1 h-14 bg-[#D32F2F]" />
+              <div className="flex items-center gap-4 mb-6 pt-2">
+                <div className="w-14 h-14 bg-[#D32F2F] rounded-full flex items-center justify-center shrink-0">
+                  <ShoppingBag size={22} className="text-white" />
+                </div>
+                <h3 className="text-navy text-2xl font-bold font-montserrat">Retail Division</h3>
+              </div>
+              <div className="space-y-4 mb-8">
+                <div>
+                  <p className="text-[#D32F2F] text-xs font-bold uppercase tracking-widest mb-1">Location</p>
+                  <div className="flex items-start gap-2 text-navy/70 text-sm">
+                    <MapPin size={14} className="mt-0.5 shrink-0 text-navy/40" />
+                    Al Sadd Street, Doha, Qatar
+                  </div>
+                </div>
+                <div>
+                  <p className="text-[#D32F2F] text-xs font-bold uppercase tracking-widest mb-1">Phone</p>
+                  <a href="tel:97444643977" className="flex items-center gap-2 text-navy/70 text-sm hover:text-navy transition-colors">
+                    <Phone size={14} className="text-navy/40" /> +974 44643977
+                  </a>
+                </div>
+                <div>
+                  <p className="text-[#D32F2F] text-xs font-bold uppercase tracking-widest mb-1">Email</p>
+                  <a href="mailto:retail@aapqatar.com" className="flex items-center gap-2 text-navy/70 text-sm hover:text-navy transition-colors">
+                    <Mail size={14} className="text-navy/40" /> retail@aapqatar.com
+                  </a>
+                </div>
+              </div>
+              <Link
+                href="/contact"
+                className="block w-full bg-[#D32F2F] hover:bg-[#B71C1C] text-white font-bold text-center py-4 rounded-full transition-colors"
+              >
+                Contact Retail Team
+              </Link>
             </div>
-            <div className="text-center sm:text-left max-w-lg">
-              <p className="text-xs font-semibold text-gold uppercase tracking-widest mb-2">
-                Featured Brand
-              </p>
-              <h3 className="text-navy text-xl font-bold font-montserrat mb-2">
-                French Avenue & Aroma International
-              </h3>
-              <p className="text-navy/60 text-sm">
-                Luxury fragrances and premium FMCG distributed exclusively
-                across Qatar through our specialised distribution vertical.
-              </p>
+
+            {/* Distribution */}
+            <div className="bg-white rounded-2xl p-8 relative overflow-hidden">
+              <div className="absolute top-0 left-8 w-1 h-14 bg-[#1a2e5a]" />
+              <div className="flex items-center gap-4 mb-6 pt-2">
+                <div className="w-14 h-14 bg-[#1a2e5a] rounded-full flex items-center justify-center shrink-0">
+                  <Truck size={22} className="text-white" />
+                </div>
+                <h3 className="text-navy text-2xl font-bold font-montserrat">Distribution Division</h3>
+              </div>
+              <div className="space-y-4 mb-8">
+                <div>
+                  <p className="text-[#1a2e5a] text-xs font-bold uppercase tracking-widest mb-1">Location</p>
+                  <div className="flex items-start gap-2 text-navy/70 text-sm">
+                    <MapPin size={14} className="mt-0.5 shrink-0 text-navy/40" />
+                    Industrial Area, Doha, Qatar
+                  </div>
+                </div>
+                <div>
+                  <p className="text-[#1a2e5a] text-xs font-bold uppercase tracking-widest mb-1">Phone</p>
+                  <a href="tel:97444643977" className="flex items-center gap-2 text-navy/70 text-sm hover:text-navy transition-colors">
+                    <Phone size={14} className="text-navy/40" /> +974 44643977
+                  </a>
+                </div>
+                <div>
+                  <p className="text-[#1a2e5a] text-xs font-bold uppercase tracking-widest mb-1">Email</p>
+                  <a href="mailto:distribution@aapqatar.com" className="flex items-center gap-2 text-navy/70 text-sm hover:text-navy transition-colors">
+                    <Mail size={14} className="text-navy/40" /> distribution@aapqatar.com
+                  </a>
+                </div>
+              </div>
+              <Link
+                href="/distribution#inquiry"
+                className="block w-full bg-[#1a2e5a] hover:bg-[#0C1B2E] text-white font-bold text-center py-4 rounded-full transition-colors"
+              >
+                Contact Distribution Team
+              </Link>
             </div>
-            <Link
-              href="/distribution"
-              className="shrink-0 bg-navy text-white font-semibold px-5 py-2.5 rounded hover:bg-navy-light transition-colors text-sm"
-            >
-              Learn More
-            </Link>
           </div>
         </div>
       </section>

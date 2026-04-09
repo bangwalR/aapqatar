@@ -1,151 +1,58 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
-import { ChevronRight, ShoppingBag, Truck } from "lucide-react";
+import { ChevronRight, ChevronDown } from "lucide-react";
 
 export default function SplitHero() {
-  const [hovered, setHovered] = useState<"retail" | "distribution" | null>(
-    null
-  );
-
   return (
-    <section className="flex flex-col md:flex-row h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)] overflow-hidden">
-      {/* ── Retail Half ── */}
-      <motion.div
-        className="relative overflow-hidden cursor-pointer"
-        initial={{ flexGrow: 1 }}
-        animate={{
-          flexGrow: hovered === "distribution" ? 0.65 : 1,
-        }}
-        transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1] }}
-        onMouseEnter={() => setHovered("retail")}
-        onMouseLeave={() => setHovered(null)}
-      >
-        {/* Background image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/assets/hero/hero.jpg"
-            alt="AAP Retail World"
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0" style={{background: 'linear-gradient(160deg, rgba(183,28,28,0.93) 0%, rgba(211,47,47,0.85) 40%, rgba(229,57,53,0.75) 100%)'}} />
-        </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(135deg, #1a1a4e 0%, #2d1b69 20%, #6b2d6b 45%, #c0392b 70%, #e74c3c 85%, #c0392b 100%)" }}
+      />
+      <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at top left, rgba(255,255,255,0.08) 0%, transparent 60%)" }} />
 
-        {/* Red accent line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-white/40 via-white/20 to-transparent" />
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-40 pb-20">
+        {/* Badge */}
+        <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-8">
+          <span className="inline-block border border-white/40 text-white/90 text-xs font-semibold tracking-[0.25em] uppercase px-5 py-2 rounded-full bg-white/5">
+            Trusted Business Partner Since 2005
+          </span>
+        </motion.div>
 
-        {/* Content */}
-        <div className="relative z-10 h-full flex flex-col justify-between p-5 sm:p-8 lg:p-14">
-          <div className="hidden sm:block">
-            <ShoppingBag className="text-white/80 mb-3" size={28} />
-          </div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.7 }}
-          >
-            <span className="inline-block text-white/90 text-xs font-semibold tracking-[0.2em] uppercase mb-2 sm:mb-3 border border-white/30 px-3 py-1 rounded-full">
-              Retail Division
-            </span>
-            <h1 className="text-white text-2xl sm:text-4xl lg:text-5xl xl:text-7xl font-black leading-none mb-3 sm:mb-5 font-montserrat">
-              Our
-              <br />
-              Retail
-              <br />
-              World
-            </h1>
-            <p className="text-white/85 text-xs sm:text-base lg:text-lg mb-4 sm:mb-8 max-w-xs leading-relaxed">
-              7+ branches across Qatar serving communities with premium
-              fresh produce and trusted everyday brands.
-            </p>
-            <Link
-              href="/retail"
-              className="inline-flex items-center gap-2 border-2 border-white text-white font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full hover:bg-white hover:text-red-700 transition-all duration-200 group text-sm sm:text-base"
-            >
-              Explore Retail
-              <ChevronRight
-                size={16}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </Link>
-          </motion.div>
-        </div>
-      </motion.div>
+        {/* Heading */}
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}>
+          <h1 className="font-black font-montserrat leading-tight mb-6">
+            <span className="block text-white text-3xl sm:text-5xl lg:text-6xl">DRIVING EXCELLENCE</span>
+            <span
+              className="block text-3xl sm:text-5xl lg:text-6xl"
+              style={{ background: "linear-gradient(90deg, #e88c8c 0%, #d4a0d4 50%, #8cb4e8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}
+            >ACROSS INDUSTRIES</span>
+          </h1>
+        </motion.div>
 
-      {/* ── Divider ── */}
-      <div className="h-px w-full md:h-auto md:w-px bg-gradient-to-r md:bg-gradient-to-b from-white/10 via-white/40 to-white/10 z-10 flex-shrink-0" />
+        {/* Subtitle */}
+        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="text-white/75 text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
+          Leading Qatar&apos;s retail and distribution landscape with innovation, quality, and commitment to excellence.
+        </motion.p>
 
-      {/* ── Distribution Half ── */}
-      <motion.div
-        className="relative overflow-hidden cursor-pointer"
-        initial={{ flexGrow: 1 }}
-        animate={{
-          flexGrow: hovered === "retail" ? 0.65 : 1,
-        }}
-        transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1] }}
-        onMouseEnter={() => setHovered("distribution")}
-        onMouseLeave={() => setHovered(null)}
-      >
-        {/* Background image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/assets/hero/distribution-hero.jpg"
-            alt="AAP Distribution"
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0" style={{background: 'linear-gradient(200deg, rgba(8,20,32,0.93) 0%, rgba(12,27,46,0.87) 40%, rgba(21,44,74,0.78) 100%)'}} />
-        </div>
+        {/* CTAs */}
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.45 }} className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href="/retail" className="inline-flex items-center justify-center gap-2 bg-[#D32F2F] hover:bg-[#B71C1C] text-white font-bold px-8 py-4 rounded-full transition-all duration-200 shadow-xl text-sm sm:text-base group">
+            Explore Retail <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+          <Link href="/distribution" className="inline-flex items-center justify-center gap-2 bg-[#1a2e5a] hover:bg-[#0C1B2E] text-white font-bold px-8 py-4 rounded-full transition-all duration-200 shadow-xl border border-white/20 text-sm sm:text-base group">
+            Explore Distribution <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </motion.div>
 
-        {/* Blue accent line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-white/40 via-white/20 to-transparent" />
-
-        {/* Content */}
-        <div className="relative z-10 h-full flex flex-col justify-between items-end p-5 sm:p-8 lg:p-14">
-          <div className="hidden sm:block">
-            <Truck className="text-white/80 mb-3" size={28} />
-          </div>
-          <motion.div
-            className="text-right"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.7 }}
-          >
-            <span className="inline-block text-white/90 text-xs font-semibold tracking-[0.2em] uppercase mb-2 sm:mb-3 border border-white/30 px-3 py-1 rounded-full">
-              Distribution Division
-            </span>
-            <h1 className="text-white text-2xl sm:text-4xl lg:text-5xl xl:text-7xl font-black leading-none mb-3 sm:mb-5 font-montserrat">
-              Global
-              <br />
-              Distribution
-              <br />
-              Power
-            </h1>
-            <p className="text-white/85 text-xs sm:text-base lg:text-lg mb-4 sm:mb-8 max-w-xs leading-relaxed ml-auto">
-              5+ distribution verticals powering FMCG supply chains across
-              Qatar and the wider Gulf region.
-            </p>
-            <Link
-              href="/distribution"
-              className="inline-flex items-center gap-2 border-2 border-white text-white font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full hover:bg-white hover:text-navy transition-all duration-200 group text-sm sm:text-base"
-            >
-              Explore Distribution
-              <ChevronRight
-                size={16}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </Link>
-          </motion.div>
-        </div>
-      </motion.div>
+        {/* Scroll indicator */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.6 }} className="mt-16 flex flex-col items-center gap-1 text-white/50">
+          <span className="text-xs tracking-[0.3em] uppercase">Scroll</span>
+          <ChevronDown size={18} className="animate-bounce" />
+        </motion.div>
+      </div>
     </section>
   );
 }

@@ -120,7 +120,7 @@ export default function TermsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy py-16 sm:py-24">
+      <section className="bg-navy pt-32 sm:pt-40 md:pt-44 pb-16 sm:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-6">
             <div className="p-3 bg-gold/15 rounded-xl">

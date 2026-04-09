@@ -65,7 +65,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy py-20 sm:py-24 relative overflow-hidden">
+      <section className="bg-navy pt-32 sm:pt-40 md:pt-44 pb-20 sm:pb-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-10 right-20 w-80 h-80 bg-gold rounded-full blur-3xl" />
         </div>

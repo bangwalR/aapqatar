@@ -125,7 +125,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy py-20 sm:py-28 overflow-hidden relative">
+      <section className="bg-navy pt-32 sm:pt-40 md:pt-44 pb-20 sm:pb-28 overflow-hidden relative">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-10 left-10 w-96 h-96 bg-gold rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-64 h-64 bg-gold rounded-full blur-3xl" />
@@ -463,7 +463,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center flex flex-wrap justify-center gap-4">
             <a
               href="https://alyoumi.qa/redeem.aspx"
               target="_blank"
@@ -472,6 +472,12 @@ export default function AboutPage() {
             >
               Redeem Points
             </a>
+            <Link
+              href="/loyalty"
+              className="inline-flex items-center gap-2 border-2 border-navy text-navy font-bold px-10 py-3.5 rounded hover:bg-navy hover:text-white transition-colors tracking-widest uppercase text-sm"
+            >
+              Full Loyalty Page &rarr;
+            </Link>
           </div>
         </div>
       </section>

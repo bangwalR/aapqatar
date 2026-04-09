@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="mb-5">
               <div className="bg-white rounded-xl px-3 py-2 inline-block shadow-md">
                 <Image
-                  src="/assets/logos/logo-aap.png"
+                  src="/assets/logos/logo-aap-new.jpeg"
                   alt="AAP Group"
                   width={614}
                   height={76}
@@ -137,6 +137,14 @@ export default function Footer() {
                   className="text-white/60 hover:text-gold text-sm transition-colors"
                 >
                   B2B Inquiry
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/loyalty"
+                  className="text-white/60 hover:text-gold text-sm transition-colors"
+                >
+                  Alyoumi Loyalty
                 </Link>
               </li>
               <li>
