@@ -9,7 +9,7 @@ export default function SplitHero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(135deg, #1a1a4e 0%, #2d1b69 20%, #6b2d6b 45%, #c0392b 70%, #e74c3c 85%, #c0392b 100%)" }}
+        style={{ background: "linear-gradient(135deg, #2E3A59 0%, #4A3F73 50%, #8B2C3D 100%)" }}
       />
       <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at top left, rgba(255,255,255,0.08) 0%, transparent 60%)" }} />
 

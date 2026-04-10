@@ -60,20 +60,18 @@ export default function Navbar() {
       {/* Main nav */}
       <div className={`transition-colors duration-500 ${scrolled ? "border-b border-white/10" : ""}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-24">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
-            <div className="bg-white rounded-xl px-3 py-2 shadow-md">
               <Image
-                src="/assets/logos/logo-aap-new.jpeg"
+                src="/assets/logos/logo-aap.png"
                 alt="AAP Group"
                 width={614}
                 height={76}
-                className="h-12 sm:h-16 w-auto object-contain"
+                className="h-8 sm:h-9 md:h-10 w-auto object-contain"
                 style={{ width: "auto" }}
                 priority
               />
-            </div>
           </Link>
 
           {/* Desktop nav */}

@@ -24,16 +24,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-5">
-              <div className="bg-white rounded-xl px-3 py-2 inline-block shadow-md">
-                <Image
-                  src="/assets/logos/logo-aap-new.jpeg"
-                  alt="AAP Group"
-                  width={614}
-                  height={76}
-                  className="h-8 w-auto object-contain"
-                  style={{ width: "auto" }}
-                />
-              </div>
+              <Image
+                src="/assets/logos/logo-aap.png"
+                alt="AAP Group"
+                width={614}
+                height={76}
+                className="h-10 w-auto object-contain"
+                style={{ width: "auto" }}
+              />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-5">
               Qatar&apos;s trusted name in retail and distribution. Serving
