@@ -486,8 +486,8 @@ export default function AboutPage() {
       <section className="py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
-            <div className="relative w-48 h-16">
-              <Image src="/assets/logos/logo-aap.png" alt="AAP Group" fill className="object-contain" />
+            <div className="relative w-56 h-20 sm:w-72 sm:h-24 md:w-80 md:h-28">
+              <Image src="/assets/logos/logo-aap-main.jpeg" alt="AAP Group" fill className="object-contain" />
             </div>
             <div className="text-center sm:text-left max-w-lg">
               <h3 className="text-navy text-xl font-bold font-montserrat mb-2">Join Our Journey</h3>

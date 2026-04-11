@@ -25,12 +25,11 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-5">
               <Image
-                src="/assets/logos/logo-aap.png"
+                src="/assets/logos/logo-aap-main.jpeg"
                 alt="AAP Group"
                 width={614}
                 height={76}
-                className="h-10 w-auto object-contain"
-                style={{ width: "auto" }}
+                className="h-14 w-52 sm:h-16 sm:w-64 object-contain"
               />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-5">
