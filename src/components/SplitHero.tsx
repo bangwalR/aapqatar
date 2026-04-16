@@ -9,23 +9,23 @@ export default function SplitHero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(135deg, #0f1a36ff 0%, #0f1a36ff 50%, #0f1a36ff 100%)" }}
+        style={{ background: "linear-gradient(135deg, #3b3f6e 0%, #6b3a6e 40%, #8b2a4a 70%, #a0253a 100%)" }}
       />
-      <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at top left, rgba(255,255,255,0.08) 0%, transparent 60%)" }} />
+      <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at top left, rgba(255,255,255,0.06) 0%, transparent 60%)" }} />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-40 pb-20">
         {/* Badge */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-8">
           <span className="inline-block border border-white/40 text-white/90 text-xs font-semibold tracking-[0.25em] uppercase px-5 py-2 rounded-full bg-white/5">
-            ALYOUMI LOYALTY PROGRAMME
+            TRUSTED BUSINESS PARTNER SINCE 2005
           </span>
         </motion.div>
 
         {/* Heading */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}>
-          <h1 className="font-black font-montserrat leading-tight mb-6 text-3xl sm:text-5xl lg:text-6xl">
-            <span className="text-white">Welcome to </span>
-            <span style={{ color: "#D32F2F" }}>Alyoumi Rewards</span>
+          <h1 className="font-black font-montserrat leading-tight mb-6 text-4xl sm:text-6xl lg:text-7xl">
+            <span className="text-white block">DRIVING EXCELLENCE</span>
+            <span className="block" style={{ color: "#e8856a" }}>ACROSS INDUSTRIES</span>
           </h1>
         </motion.div>
 
