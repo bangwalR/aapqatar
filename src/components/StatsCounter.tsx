@@ -5,32 +5,39 @@ import { useInView } from "react-intersection-observer";
 
 const stats = [
   {
-    value: 18,
+    value: 54,
     suffix: "+",
-    label: "Years in Business",
-    sublabel: "Since 2005",
+    label: "Years of Experience",
+    sublabel: "Since 1971",
     color: "#D32F2F",
   },
   {
-    value: 500,
+    value: 950000,
     suffix: "+",
-    label: "Happy Clients",
+    label: "Happy Customers",
     sublabel: "And Growing",
     color: "#1a2e5a",
   },
   {
-    value: 10,
-    suffix: "K+",
-    label: "Products Distributed",
+    value: 11,
+    suffix: "",
+    label: "Divisions",
     sublabel: "Across Qatar",
     color: "#D32F2F",
   },
   {
-    value: 7,
+    value: 25000,
     suffix: "+",
-    label: "Retail Locations",
+    label: "Sq Meter Shopping Area",
     sublabel: "Across Qatar",
     color: "#1a2e5a",
+  },
+  {
+    value: 38,
+    suffix: "+",
+    label: "Participating Brands",
+    sublabel: "And Growing",
+    color: "#D32F2F",
   },
 ];
 
@@ -40,7 +47,7 @@ export default function StatsCounter() {
   return (
     <section ref={ref} className="bg-white py-16 sm:py-20 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
           {stats.map((stat, i) => (
             <div
               key={i}

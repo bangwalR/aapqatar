@@ -5,10 +5,6 @@ import {
   MapPin,
   Clock,
   ChevronRight,
-  Star,
-  ShoppingCart,
-  Leaf,
-  Award,
 } from "lucide-react";
 
 const stores = [
@@ -56,13 +52,6 @@ const stores = [
   },
 ];
 
-const nismHighlights = [
-  { icon: Leaf, text: "Premium fresh organic produce sourced daily" },
-  { icon: Star, text: "Authentic Indian groceries & spices" },
-  { icon: ShoppingCart, text: "Wide range of South Asian FMCG brands" },
-  { icon: Award, text: "Heritage quality trusted since establishment" },
-];
-
 export default function RetailPage() {
   return (
     <>
@@ -92,82 +81,6 @@ export default function RetailPage() {
             7+ branches bringing premium quality groceries, fresh produce, and
             trusted brands to communities across Qatar.
           </p>
-        </div>
-      </section>
-
-      {/* Breadcrumb */}
-      <div className="bg-cream border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <div className="flex items-center gap-2 text-xs text-navy/50">
-            <Link href="/" className="hover:text-gold transition-colors">
-              Home
-            </Link>
-            <ChevronRight size={12} />
-            <span className="text-navy font-medium">Retail Division</span>
-          </div>
-        </div>
-      </div>
-
-      {/* ── NEW INDIAN SUPERMARKET ── */}
-      <section className="py-14 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-            {/* Image */}
-            <div className="relative">
-              <div className="relative h-60 sm:h-80 lg:h-[480px] rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/assets/logos/nism.jpg"
-                  alt="New Indian Supermarket"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
-              </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-5 -right-5 bg-gold text-white font-black text-sm px-5 py-3 rounded-xl shadow-lg">
-                Est. Heritage Brand
-              </div>
-            </div>
-
-            {/* Content */}
-            <div>
-              <span className="inline-block text-gold text-xs font-semibold tracking-[0.2em] uppercase mb-4 border border-gold/30 px-3 py-1 rounded-full">
-                Featured Retail Brand
-              </span>
-              <h2 className="text-navy text-2xl sm:text-3xl lg:text-4xl font-black font-montserrat leading-tight mb-4">
-                New Indian
-                <br />
-                <span className="gold-shimmer-text">Supermarket</span>
-              </h2>
-              <p className="text-navy/65 leading-relaxed mb-6">
-                The New Indian Supermarket is a Doha institution — a curated
-                grocery experience bringing the finest South Asian produce,
-                spices, and FMCG brands to Qatar&apos;s diverse community. Each
-                product is selected with care to honour authentic flavours and
-                premium quality.
-              </p>
-
-              <div className="flex flex-col gap-3 mb-8">
-                {nismHighlights.map((item, i) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={i} className="flex items-center gap-3">
-                      <div className="p-2 bg-gold/10 rounded-lg">
-                        <Icon size={16} className="text-gold" />
-                      </div>
-                      <span className="text-navy/75 text-sm">{item.text}</span>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <div className="flex items-center gap-2 text-sm text-navy/50">
-                <MapPin size={14} className="text-gold" />
-                <span>Doha, Qatar — 1 Flagship Location</span>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

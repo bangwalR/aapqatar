@@ -83,16 +83,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Breadcrumb */}
-      <div className="bg-cream border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <div className="flex items-center gap-2 text-xs text-navy/50">
-            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
-            <ChevronRight size={12} />
-            <span className="text-navy font-medium">Contact</span>
-          </div>
-        </div>
-      </div>
+
 
       {/* Contact info cards */}
       <section className="py-12 bg-white border-b border-gray-100">
@@ -143,17 +134,27 @@ export default function ContactPage() {
               </p>
 
               {/* Map embed */}
-              <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm mb-6 h-52">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.3!2d51.5987!3d25.1667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDEwJzAwLjAiTiA1McKwMzUnNTMuMiJF!5e0!3m2!1sen!2sqa!4v1617000000000"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="AAP Group Corporate Office"
-                />
+              <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm mb-6 relative">
+                <a
+                  href="https://www.google.com/maps?q=25.146984747875905,51.597958754077325"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute top-3 left-3 z-10 bg-white text-blue-600 text-xs font-semibold px-3 py-1.5 rounded shadow flex items-center gap-1 hover:bg-blue-50 transition-colors"
+                >
+                  Open in Maps ↗
+                </a>
+                <div className="h-52">
+                  <iframe
+                    src="https://www.google.com/maps?q=25.146984747875905,51.597958754077325&z=17&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="AAP Group Corporate Office"
+                  />
+                </div>
               </div>
 
               {/* Store locations quick link */}

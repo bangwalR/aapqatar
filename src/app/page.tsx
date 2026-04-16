@@ -149,7 +149,7 @@ export default function HomePage() {
       <BrandLogoGallery />
 
       {/* Portfolio */}
-      <section id="portfolio" className="py-16 lg:py-24 bg-white">
+      {/* <section id="portfolio" className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="inline-block text-[#D32F2F] text-xs font-semibold tracking-[0.25em] uppercase mb-3 border border-[#D32F2F]/30 px-3 py-1 rounded-full">
@@ -187,7 +187,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonial */}
       <section className="py-16 lg:py-24 bg-gray-50">

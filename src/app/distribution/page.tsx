@@ -157,19 +157,6 @@ export default function DistributionPage() {
         </div>
       </section>
 
-      {/* Breadcrumb */}
-      <div className="bg-cream border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <div className="flex items-center gap-2 text-xs text-navy/50">
-            <Link href="/" className="hover:text-gold transition-colors">
-              Home
-            </Link>
-            <ChevronRight size={12} />
-            <span className="text-navy font-medium">Distribution Division</span>
-          </div>
-        </div>
-      </div>
-
       {/* Intro */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-5">
               <Image
-                src="/assets/logos/logo-aap-main.jpeg"
+                src="/assets/logos/logo.png"
                 alt="AAP Group"
                 width={614}
                 height={76}

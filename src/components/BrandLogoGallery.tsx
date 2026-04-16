@@ -10,7 +10,7 @@ const brands = [
   { name: "Illam", logo: "/assets/logos/illam.png" },
   { name: "MTR", logo: "/assets/logos/mtr.png" },
   { name: "Nirmal", logo: "/assets/logos/nirmal.png" },
-  { name: "NISM", logo: "/assets/logos/nism.jpg" },
+
 ];
 
 const containerVariants = {
@@ -52,7 +52,7 @@ export default function BrandLogoGallery() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6"
         >
           {brands.map((brand) => (
             <motion.div
@@ -62,18 +62,18 @@ export default function BrandLogoGallery() {
                 y: -6,
                 boxShadow: "0 16px 40px rgba(211,47,47,0.2)",
               }}
-              className="bg-white rounded-xl p-6 flex flex-col items-center justify-center gap-3 border border-transparent hover:border-gold/30 transition-colors duration-300 cursor-pointer group"
+              className="bg-white rounded-xl p-8 flex flex-col items-center justify-center gap-4 border border-transparent hover:border-gold/30 transition-colors duration-300 cursor-pointer group"
             >
-              <div className="relative w-20 h-16">
+              <div className="relative w-32 h-24">
                 <Image
                   src={brand.logo}
                   alt={brand.name}
                   fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 160px"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 200px"
                   className="object-contain"
                 />
               </div>
-              <span className="text-navy/50 text-xs font-medium group-hover:text-gold transition-colors">
+              <span className="text-navy/50 text-sm font-medium group-hover:text-gold transition-colors">
                 {brand.name}
               </span>
             </motion.div>

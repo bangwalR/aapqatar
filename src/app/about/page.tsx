@@ -155,16 +155,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Breadcrumb */}
-      <div className="bg-cream border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <div className="flex items-center gap-2 text-xs text-navy/50">
-            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
-            <ChevronRight size={12} />
-            <span className="text-navy font-medium">About Us</span>
-          </div>
-        </div>
-      </div>
+
 
       {/* Stats bar */}
       <section className="bg-white border-b border-gray-100 py-8">
@@ -487,7 +478,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
             <div className="relative w-56 h-20 sm:w-72 sm:h-24 md:w-80 md:h-28">
-              <Image src="/assets/logos/logo-aap-main.jpeg" alt="AAP Group" fill className="object-contain" />
+              <Image src="/assets/logos/logo.png" alt="AAP Group" fill className="object-contain" />
             </div>
             <div className="text-center sm:text-left max-w-lg">
               <h3 className="text-navy text-xl font-bold font-montserrat mb-2">Join Our Journey</h3>

@@ -27,20 +27,17 @@ const howItWorks = [
 
 const faqs = [
   {
-    q: "How do I get an Alyoumi Card?",
-    a: "Visit any participating Retail Mart store in Qatar and ask for a free Alyoumi Loyalty Card. You can register it at the store or online.",
+    q: "How do I register in Alyoumi loyalty program?",
+    a: "The Alyoumi Rewards loyalty programme is free to join. Any individual aged 18 years or above can enroll by registering through the Alyoumi mobile application or by visiting the alyoumi webiste.",
   },
   {
-    q: "How are points calculated?",
-    a: "You earn 1 point for every 1 Qatari Riyal spent on qualifying purchases in selected categories. Points are added automatically when you present your card at checkout.",
+    q: "How do I redeeem the points?",
+    a: `Customers can redeem their points in two ways:\n1. OTP Redemption at the Store\n2. Voucher Redemption through the Alyoumi App`,
   },
-  {
-    q: "When do points expire?",
-    a: "Points are valid for 12 months from the date they are earned. Make sure to use your points before they expire to enjoy rewards.",
-  },
+  
   {
     q: "Where can I check my balance?",
-    a: "You can check your current point balance anytime by visiting alyoumi.qa and logging into your account, or by asking at any participating Retail Mart store.",
+    a: "You can check your current point balance anytime by visiting the alyoumi.qa and logging into your account. Alternatively, you may inquire at any participating  store.You can also download the Alyoumi application from the Play Store or Apple App Store. Through the app, you can easily view your point balance and access your complete account details.",
   },
 ];
 
@@ -107,19 +104,6 @@ export default function LoyaltyPage() {
           </div>
         </div>
       </section>
-
-      {/* Breadcrumb */}
-      <div className="bg-cream border-b border-navy/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <nav className="flex items-center gap-2 text-xs sm:text-sm text-navy/40">
-            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
-            <ChevronRight size={12} />
-            <Link href="/about" className="hover:text-gold transition-colors">About</Link>
-            <ChevronRight size={12} />
-            <span className="text-navy font-medium">Loyalty Programme</span>
-          </nav>
-        </div>
-      </div>
 
       {/* About the Card */}
       <section className="py-16 sm:py-24 bg-white">

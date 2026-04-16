@@ -64,7 +64,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
               <Image
-                src="/assets/logos/logo-aap-main.jpeg"
+                src="/assets/logos/logo.png"
                 alt="AAP Group"
                 width={614}
                 height={76}
