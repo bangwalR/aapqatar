@@ -8,7 +8,7 @@ const stats = [
     value: 54,
     suffix: "+",
     label: "Years of Experience",
-    sublabel: "Since 1971",
+    sublabel: "Since 1972",
     color: "#D32F2F",
   },
   {

@@ -262,19 +262,21 @@ export default function HomePage() {
                   <p className="text-[#D32F2F] text-xs font-bold uppercase tracking-widest mb-1">Location</p>
                   <div className="flex items-start gap-2 text-navy/70 text-sm">
                     <MapPin size={14} className="mt-0.5 shrink-0 text-navy/40" />
-                    Al Sadd Street, Doha, Qatar
+                    <a href="https://www.google.com/maps?q=25.146801779193925,51.59806921961481" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                      Al Janoub Street, Al Wakra
+                    </a>
                   </div>
                 </div>
                 <div>
                   <p className="text-[#D32F2F] text-xs font-bold uppercase tracking-widest mb-1">Phone</p>
-                  <a href="tel:97444643977" className="flex items-center gap-2 text-navy/70 text-sm hover:text-navy transition-colors">
-                    <Phone size={14} className="text-navy/40" /> +974 44643977
+                  <a href="tel:97444140704" className="flex items-center gap-2 text-navy/70 text-sm hover:text-navy transition-colors">
+                    <Phone size={14} className="text-navy/40" /> +974 44140704
                   </a>
                 </div>
                 <div>
                   <p className="text-[#D32F2F] text-xs font-bold uppercase tracking-widest mb-1">Email</p>
-                  <a href="mailto:retail@aapqatar.com" className="flex items-center gap-2 text-navy/70 text-sm hover:text-navy transition-colors">
-                    <Mail size={14} className="text-navy/40" /> retail@aapqatar.com
+                  <a href="mailto:retailmart@rmart.qa" className="flex items-center gap-2 text-navy/70 text-sm hover:text-navy transition-colors">
+                    <Mail size={14} className="text-navy/40" /> retailmart@rmart.qa
                   </a>
                 </div>
               </div>
@@ -305,14 +307,14 @@ export default function HomePage() {
                 </div>
                 <div>
                   <p className="text-[#1a2e5a] text-xs font-bold uppercase tracking-widest mb-1">Phone</p>
-                  <a href="tel:97444643977" className="flex items-center gap-2 text-navy/70 text-sm hover:text-navy transition-colors">
-                    <Phone size={14} className="text-navy/40" /> +974 44643977
+                  <a href="tel:97444140704" className="flex items-center gap-2 text-navy/70 text-sm hover:text-navy transition-colors">
+                    <Phone size={14} className="text-navy/40" /> +974 44140704
                   </a>
                 </div>
                 <div>
                   <p className="text-[#1a2e5a] text-xs font-bold uppercase tracking-widest mb-1">Email</p>
-                  <a href="mailto:distribution@aapqatar.com" className="flex items-center gap-2 text-navy/70 text-sm hover:text-navy transition-colors">
-                    <Mail size={14} className="text-navy/40" /> distribution@aapqatar.com
+                  <a href="mailto:info@aapqatar.com" className="flex items-center gap-2 text-navy/70 text-sm hover:text-navy transition-colors">
+                    <Mail size={14} className="text-navy/40" />info@aapqatar.com
                   </a>
                 </div>
               </div>

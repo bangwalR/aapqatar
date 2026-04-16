@@ -13,8 +13,8 @@ const contactDetails = [
   {
     icon: Phone,
     title: "Call Us",
-    lines: ["+974 44643977"],
-    href: "tel:97444643977",
+    lines: ["+974 44140704"],
+    href: "tel:97444140704",
   },
   {
     icon: Mail,

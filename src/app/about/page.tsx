@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = {
   title: "About AAP Group | Al Ansari & Partners — Qatar",
   description:
-    "Established in 1972 in Al Bidda, Doha, AAP Group has grown from a small neighbourhood store to Qatar's leading retail and distribution conglomerate with 48+ years of excellence.",
+    "Established in 1972 in Al Bidda, Doha, AAP Group has grown from a small neighbourhood store to Qatar's leading retail and distribution conglomerate with 54+ years of excellence.",
 };
 
 const milestones = [
@@ -116,7 +116,7 @@ const services = [
 
 const stats = [
   { icon: Users,  value: "15,000+", label: "Customers Per Day"     },
-  { icon: Award,  value: "48+",     label: "Years of Excellence"    },
+  { icon: Award,  value: "54+",     label: "Years of Excellence"    },
   { icon: ShoppingBag, value: "7+", label: "Retail Branches"       },
   { icon: Truck,  value: "5+",      label: "Distribution Verticals" },
 ];
@@ -135,7 +135,7 @@ export default function AboutPage() {
             Our Story
           </span>
           <h1 className="text-white text-3xl sm:text-5xl lg:text-6xl font-black font-montserrat leading-tight mb-5 max-w-3xl">
-            48+ Years of Quality<br />
+            54+ Years of Quality<br />
             <span className="gold-shimmer-text">and Service in Qatar</span>
           </h1>
           <p className="text-white/65 text-base sm:text-lg max-w-2xl leading-relaxed mb-8">

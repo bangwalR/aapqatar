@@ -117,9 +117,9 @@ export default function LoyaltyPage() {
                 Your Loyalty, <br className="hidden sm:block" />Our Reward
               </h2>
               <p className="text-navy/60 text-sm sm:text-base leading-relaxed mb-6">
-                The Alyoumi Loyalty Card is a free rewards programme exclusively available
-                at Retail Mart stores in Qatar. Every purchase earns you points that can be
-                redeemed for discounts and special offers.
+                Alyoumi Rewards loyalty program is a free rewards program available at Retail mart and New Indian Supermarket stores in Qatar.
+                Alyoumi Rewards is one of our most prestigious and successful customer loyalty programs. 
+                It enhances the shopping experience by allowing customers to earn and redeem points through purchases.
               </p>
               <ul className="flex flex-col gap-3 mb-8">
                 {[
@@ -148,30 +148,11 @@ export default function LoyaltyPage() {
             {/* Card visual */}
             <div className="flex justify-center">
               <div className="relative w-full max-w-sm">
-                <div className="bg-gradient-to-br from-[#0C1B2E] via-[#162d4a] to-[#1a2e5a] rounded-2xl p-8 shadow-2xl aspect-[3/2] flex flex-col justify-between">
-                  <div>
-                    <p className="text-white/40 text-xs font-medium uppercase tracking-[0.25em] mb-1">
-                      Loyalty Programme
-                    </p>
-                    <h3 className="text-white text-2xl font-extrabold font-montserrat">
-                      Alyoumi
-                    </h3>
-                  </div>
-                  <div className="flex items-end justify-between">
-                    <div>
-                      <p className="text-white/40 text-[10px] uppercase tracking-widest mb-1">
-                        Card Holder
-                      </p>
-                      <p className="text-white text-sm font-semibold tracking-wide">
-                        YOUR NAME
-                      </p>
-                    </div>
-                    <div className="flex gap-1">
-                      <div className="w-8 h-8 rounded-full bg-[#D32F2F]/80" />
-                      <div className="w-8 h-8 rounded-full bg-[#ff6b6b]/60 -ml-3" />
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src="/assets/logos/Alyoumi.png"
+                  alt="Alyoumi Loyalty Card"
+                  className="w-full rounded-2xl shadow-2xl"
+                />
                 {/* Glow */}
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#D32F2F]/10 to-transparent rounded-3xl -z-10 blur-2xl" />
               </div>

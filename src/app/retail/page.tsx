@@ -5,6 +5,8 @@ import {
   MapPin,
   Clock,
   ChevronRight,
+  Phone,
+  Mail,
 } from "lucide-react";
 
 const stores = [
@@ -12,42 +14,60 @@ const stores = [
     name: "Retailmart Madinath Khalifa",
     location: "Madinath Khalifa, Doha",
     image: "/assets/stores/rmart-madinath-khalifa.jpg",
-    hours: "7:00 AM – 11:00 PM",
+    hours: "6:30 AM – 1:30 AM (Next Day)",
+    phone: "+974-44140704",
+    email: "retailmart@rmart.qa",
+    mapUrl: "https://www.google.com/maps?q=25.329548601477796,51.47125279906336",
     features: ["Fresh Produce", "Bakery", "Butchery"],
   },
   {
     name: "Retailmart Mesaieed",
     location: "Mesaieed Industrial City",
     image: "/assets/stores/rmart-mesaieed.jpg",
-    hours: "7:00 AM – 11:00 PM",
+    hours: "6:30 AM – 11:30 AM",
+    phone: "+974-44140704",
+    email: "retailmart@rmart.qa",
+    mapUrl: "https://www.google.com/maps?q=24.990242356459635,51.555303249768315",
     features: ["Grocery", "Fresh Dairy", "Deli"],
   },
   {
     name: "Retailmart Wakra",
     location: "Al Wakra, Doha",
     image: "/assets/stores/rmart-wakra.jpg",
-    hours: "7:00 AM – 11:00 PM",
+    hours: "24 Hours",
+    phone: "+974-44140704",
+    email: "retailmart@rmart.qa",
+    mapUrl: "https://www.google.com/maps?q=25.15829146297304,51.59909578476934",
     features: ["Fresh Produce", "Organic Range", "Bulk Goods"],
   },
   {
     name: "Retailmart Wakra 2",
     location: "Al Wakra South, Doha",
     image: "/assets/stores/rmart-wakra-2.jpg",
-    hours: "7:00 AM – 11:00 PM",
+    hours: "24 Hours",
+    phone: "+974-44140704",
+    email: "retailmart@rmart.qa",
+    mapUrl: "https://www.google.com/maps?q=25.14704272103449,51.597871787758976",
     features: ["Family Shopping", "Fresh Meat", "Bakery"],
   },
   {
     name: "Retailmart Sheireb",
     location: "Msheireb Downtown, Doha",
     image: "/assets/stores/rmart-sheireb.jpg",
-    hours: "8:00 AM – 12:00 AM",
+    hours: "6:30 AM – 2:00 AM (Next Day)",
+    phone: "+974-44140704",
+    email: "retailmart@rmart.qa",
+    mapUrl: "https://www.google.com/maps?q=25.280803692312304,51.52126515302447",
     features: ["Premium Range", "Import Goods", "Café Corner"],
   },
   {
     name: "Retailmart Sanayya",
     location: "Industrial Area, Doha",
     image: "/assets/stores/rmart-sanayya.jpg",
-    hours: "7:00 AM – 11:00 PM",
+    hours: "6:30 AM – 11:30 PM",
+    phone: "+974-44140704",
+    email: "retailmart@rmart.qa",
+    mapUrl: "https://www.google.com/maps?q=25.192730699288575,51.451298838429764",
     features: ["Bulk Buying", "Business Packs", "Fresh Produce"],
   },
 ];
@@ -133,11 +153,23 @@ export default function RetailPage() {
                   </h3>
                   <div className="flex items-center gap-1.5 text-navy/50 text-xs mb-1.5">
                     <MapPin size={12} className="text-gold" />
-                    <span>{store.location}</span>
+                    {store.mapUrl ? (
+                      <a href={store.mapUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">{store.location}</a>
+                    ) : (
+                      <span>{store.location}</span>
+                    )}
                   </div>
-                  <div className="flex items-center gap-1.5 text-navy/50 text-xs mb-4">
+                  <div className="flex items-center gap-1.5 text-navy/50 text-xs mb-1.5">
                     <Clock size={12} className="text-gold" />
                     <span>{store.hours}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-navy/50 text-xs mb-1.5">
+                    <Phone size={12} className="text-gold" />
+                    <a href={`tel:${store.phone.replace(/[^0-9+]/g, "")}`} className="hover:text-gold transition-colors">{store.phone}</a>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-navy/50 text-xs mb-4">
+                    <Mail size={12} className="text-gold" />
+                    <a href={`mailto:${store.email}`} className="hover:text-gold transition-colors">{store.email}</a>
                   </div>
                   {/* Feature tags */}
                   <div className="flex flex-wrap gap-1.5">
